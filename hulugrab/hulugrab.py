@@ -13,13 +13,6 @@ logclick=browser.find_element_by_xpath('//*[@id="__next"]/div/div/div[2]/div[1]/
 email.send_keys("myemail@email.com"); passw.send_keys("mypass")
 logclick.click()
 
-def canned_soup():
-	url = page
-	headers = {'User-Agent': 'Mozilla 5.0'}
-	request = requests.get(url, headers=headers)
-	soup = BS(request.text,"html.parser")
-	return soup
-
 def tab_one():
 	browser.switch_to.window(browser.window_handles[0])
 
